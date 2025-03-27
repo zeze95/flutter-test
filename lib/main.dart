@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_test/common/theme.dart';
+import 'package:my_test/commons/color/theme.dart';
+import 'package:my_test/commons/const/router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,10 +12,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Flutter Demo',
       theme: lightTheme,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      routerConfig: router,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
